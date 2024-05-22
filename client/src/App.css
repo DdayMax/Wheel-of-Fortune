@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  --main-btn-background: linear-gradient(18deg, #8a0000, #bc0000);
+  --main-btn-background-hover: linear-gradient(18deg, #b70000, #d80101);
+  --info-card-background: linear-gradient(325deg, #73bafd8c, #2438927d);
+  --main-text-shadow: 3px 4px 0.1em #1b38a0;
+  --pseudo-border-gradient: linear-gradient(#fecc7c, #e28b02);
+}
+
+@media (max-width: 721px) {
+  .preload-text {
+    font-size: 30px;
+  }
+  #root {
+    padding: 1rem;
+  }
+}

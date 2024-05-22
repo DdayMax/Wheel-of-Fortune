@@ -1,0 +1,25 @@
+.Wheel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(#3496df, #026dba);
+  box-shadow: inset 3px 6px 0.4em #1b38a0;
+}
+
+@media (max-width: 1025px) {
+  .sc-gsTCUz.bhdLno {
+    max-width: 330px;
+    max-height: 330px;
+  }
+}
+@media (max-width: 721px) {
+  .Wheel {
+    padding: 5px;
+  }
+  .sc-gsTCUz.bhdLno {
+    width: 185px;
+    height: 185px;
+  }
+}

@@ -1,0 +1,23 @@
+.info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  color: gold;
+  box-shadow: inset 1px 3px 0.4em #1b38a0;
+  background: var(--info-card-background);
+}
+
+.info-container:first-child {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 720px) {
+  .info-container {
+    padding: 3px 10px;
+  }
+  .info-container:first-child {
+    margin-bottom: 0;
+  }
+}

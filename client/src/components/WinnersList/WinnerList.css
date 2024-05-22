@@ -1,0 +1,66 @@
+.winner-list {
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(#3496df, #026dba);
+  box-shadow: inset 3px 6px 0.4em #1b38a0;
+}
+
+.winner-list__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 40px;
+  text-shadow: var(--main-text-shadow);
+}
+
+.winner-list__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.winner-list__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: -webkit-fill-available;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: left;
+  background: linear-gradient(#73bafd, #24389252);
+}
+
+.winner-list__item * {
+  width: 33%;
+}
+
+.winner-list__user {
+  margin: 0;
+  display: inline-block;
+}
+
+.winner-list__date {
+  text-align: right;
+}
+
+.winner-list__amount {
+  text-align: center;
+}
+
+@media (max-width: 721px) {
+  .winner-list {
+    padding: 10px;
+  }
+  .winner-list__title {
+    font-size: 30px;
+  }
+
+  .winner-list__item {
+    padding: 5px 8px;
+    font-size: 15px;
+  }
+}

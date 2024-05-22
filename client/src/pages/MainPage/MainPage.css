@@ -1,0 +1,29 @@
+.game__title {
+  margin: 0;
+  margin-bottom: 40px;
+  color: #fff;
+  text-shadow: var(--main-text-shadow);
+}
+
+.game__wheel-and-info-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1025px) {
+  .game__wheel-and-info-wrapper {
+    gap: 10%;
+  }
+}
+
+@media (max-width: 721px) {
+  .game__title {
+    font-size: 41px;
+    margin-bottom: 20px;
+  }
+  .game__wheel-and-info-wrapper {
+    gap: 3%;
+  }
+}
