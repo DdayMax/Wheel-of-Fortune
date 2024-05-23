@@ -8,8 +8,8 @@ type UserType = z.infer<typeof UserSchema>;
 
 export const useMe = () => {
   const storedUser = localStorage.getItem("user");
-  const initialUser = storedUser ? JSON.parse(storedUser) : null;
-  const [me, setMe] = useState<UserType | null>(initialUser);
+  const initialUser: UserType = storedUser ? JSON.parse(storedUser) : null;
+  const [me, setMe] = useState<UserType>(initialUser);
 
   const { data, isLoading, isError } = useQuery(
     {
@@ -31,5 +31,5 @@ export const useMe = () => {
     }
   }, [me, data]);
 
-  return { me, data, isLoading, isError };
+  return { me, isLoading, isError };
 };

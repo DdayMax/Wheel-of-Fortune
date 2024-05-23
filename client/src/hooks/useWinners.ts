@@ -19,6 +19,11 @@ export const useWinners = () => {
     if (data) {
       setWinners(data);
     }
+    const interval = setInterval(() => {
+      queryClient.invalidateQueries({ queryKey: ["winners"] });
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, [data]);
 
   return { winners, isError, isLoading };

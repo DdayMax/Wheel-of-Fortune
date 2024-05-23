@@ -1,5 +1,4 @@
 import { WinnerToSend } from "./Winners";
-// import { queryClient } from "./queryClient";
 import { validateResponse } from "./validateResponse";
 
 export const updateUserOnServer = (user: WinnerToSend) => {
@@ -12,10 +11,6 @@ export const updateUserOnServer = (user: WinnerToSend) => {
   })
     .then(validateResponse)
     .then((response) => response.json())
-    .then((data) => {
-      console.log("User updated:", data);
-      // queryClient.invalidateQueries({ queryKey: ["users", "me"] });
-    })
     .catch((error) => {
       console.error("Error updating:", error);
     });
