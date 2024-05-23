@@ -3,23 +3,16 @@ import { useMe } from "./hooks/useMe";
 import { MainPage } from "./pages/MainPage";
 
 function App() {
-  const { me, data, isLoading, isError } = useMe();
+  const { me, isLoading, isError } = useMe();
 
-  if (me) {
-    return (
-      <>
-        <MainPage me={me} />
-      </>
-    );
-  }
   if (isLoading) {
     return <h1 className="preload-text">Loading...</h1>;
   } else if (isError) {
     return <h1 className="preload-text">Connection error</h1>;
-  } else if (data)
+  } else if (me)
     return (
       <>
-        <MainPage me={data} />
+        <MainPage me={me} />
       </>
     );
 }
