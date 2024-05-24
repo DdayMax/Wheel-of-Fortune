@@ -15,7 +15,7 @@ export type Winner = z.infer<typeof WinnerSchema>;
 export type WinnerToSend = Omit<Winner, "date">;
 
 export function fetchWinners(): Promise<Winner[]> {
-  return fetch("http://localhost:3000/users/winners")
+  return fetch("api/users/winners")
     .then(validateResponse)
     .then((response) => response.json())
     .then((data) => WinnersArraySchema.parse(data));

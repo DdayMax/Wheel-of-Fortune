@@ -1,5 +1,6 @@
 import { randomUUID } from "crypto";
-import { JSONFilePreset } from "lowdb/node";
+const lowdbModule = await import("lowdb/node");
+const JSONFilePreset = lowdbModule.JSONFilePreset;
 
 export interface IUser {
   id: string;

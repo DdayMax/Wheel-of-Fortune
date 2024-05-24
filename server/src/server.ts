@@ -5,7 +5,7 @@ import { usersRouter } from "./routes";
 import { sleep } from "./sleep";
 
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 
 app.use(json(), cors(), sleep([400, 1500]));
 
