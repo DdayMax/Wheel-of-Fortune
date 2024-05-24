@@ -10,7 +10,7 @@ export const UserSchema = z.object({
 export type IUser = z.infer<typeof UserSchema>;
 
 export function fetchMe(): Promise<IUser> {
-  return fetch("http://localhost:3000/users/me")
+  return fetch("api/users/me")
     .then(validateResponse)
     .then((response) => response.json())
     .then((data) => UserSchema.parse(data));

@@ -2,7 +2,7 @@ import { WinnerToSend } from "./Winners";
 import { validateResponse } from "./validateResponse";
 
 export const updateUserOnServer = (user: WinnerToSend) => {
-  return fetch(`http://localhost:3000/users/winners`, {
+  return fetch(`api/users/winners`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
